@@ -1,0 +1,54 @@
+<header class="sticky top-0 z-50 border-b border-border bg-background/90 backdrop-blur-xl">
+    <div class="mx-auto grid h-20 max-w-[1440px] grid-cols-[minmax(0,1fr)_auto] items-center px-5 lg:px-10">
+
+        <!-- Brand -->
+        <a href="#home" class="flex min-w-0 items-center gap-3" aria-label="Nexa Architecture home">
+            <span class="grid size-8 shrink-0 place-items-center border border-primary text-xs font-black text-primary">
+                N
+            </span>
+
+            <span class="truncate text-sm font-bold uppercase">
+                Nexa Architecture
+            </span>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden items-center gap-8 lg:flex" aria-label="Primary navigation">
+            @for (item of navItems; track item.href) {
+            <a [href]="item.href" class="text-xs font-medium text-muted-foreground transition-colors hover:text-primary">
+                {{ item.label }}
+            </a>
+            }
+
+        </nav>
+
+        <!-- Mobile Menu Button -->
+        <button type="button" class="grid size-11 place-items-center border border-border text-foreground lg:hidden"
+            (click)="toggleMenu()" aria-label="Toggle menu" aria-controls="mobile-nav"
+            [attr.aria-expanded]="menuOpen">
+            @if (menuOpen) {
+            <lucide-icon [img]="closeIcon" [size]="20" />
+            } @else {
+            <lucide-icon [img]="menuIcon" [size]="20" />
+            }
+        </button>
+
+    </div>
+
+    <!-- Mobile Navigation -->
+    @if (menuOpen) {
+    <nav id="mobile-nav" class="border-t border-border bg-background px-5 py-6 lg:hidden"
+        aria-label="Mobile navigation">
+        <div class="flex flex-col">
+
+            @for (item of navItems; track item.href) {
+            <a [href]="item.href" (click)="closeMenu()" class="border-b border-border py-4 text-sm font-semibold">
+                {{ item.label }}
+            </a>
+            }
+
+
+        </div>
+    </nav>
+    }
+</header>

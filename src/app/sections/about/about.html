@@ -1,0 +1,49 @@
+<!-- app/sections/about/about.html -->
+<section id="about" class="border-b border-border bg-card py-24 lg:py-32">
+    <div class="mx-auto max-w-[1440px] px-5 lg:px-10">
+
+        <app-section-label number="03" label="About Nexa" />
+
+
+        <!-- Content -->
+        <div class="mt-8">
+
+            <h2 class="max-w-3xl text-5xl font-black leading-[.98] sm:text-6xl">
+                Built for Complexity.<br />
+
+                <span class="text-primary">
+                    Designed for Clarity.
+                </span>
+            </h2>
+
+            <p class="mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground">
+                Nexa Architecture helps businesses navigate complexity through
+                better systems, smarter technology decisions, and structured
+                digital transformation.
+            </p>
+
+            <!-- Principles -->
+            <div class="mt-12 border-t border-border">
+
+                @for (item of principles; track item.number) {
+                <div class="grid gap-3 border-b border-border py-6 sm:grid-cols-[48px_1fr_1.4fr] sm:gap-6">
+                    <span class="text-sm font-bold text-primary">
+                        {{ item.number }}
+                    </span>
+
+                    <h3 class="font-bold">
+                        {{ item.title }}
+                    </h3>
+
+                    <p class="text-sm leading-relaxed text-muted-foreground">
+                        {{ item.text }}
+                    </p>
+                </div>
+                }
+
+            </div>
+
+        </div>
+
+    </div>
+</section>

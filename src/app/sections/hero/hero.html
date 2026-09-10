@@ -1,0 +1,88 @@
+<section id="home" class="relative border-b border-border technical-grid">
+    <div class="mx-auto grid  max-w-[1440px]  lg:grid-cols-[1.08fr_.92fr]">
+        <!-- Hero Content -->
+        <div
+            class="flex flex-col justify-center border-border px-5 py-16 lg:justify-between lg:border-r lg:px-10 lg:py-16">
+            <div>
+                <app-section-label number="01" label="Introduction" />
+
+                <p class="mt-8 text-[10px] font-semibold uppercase text-muted-foreground">
+                    Systems • Strategy • Transformation
+                </p>
+
+                <h1
+                    class="mt-5 max-w-4xl text-6xl font-black leading-[.9] tracking-normal sm:text-7xl lg:text-[clamp(5rem,7.5vw,8.5rem)]">
+                    From Chaos<br />
+                    to <span class="text-primary">Clarity.</span>
+                </h1>
+
+                <p class="mt-8 max-w-xl text-lg leading-relaxed text-muted-foreground sm:text-xl">
+                    We transform complex operations into clear and efficient solutions.
+                </p>
+
+                <!-- CTA -->
+                <div class="mt-10 flex flex-col gap-3 sm:flex-row">
+                    <a href="mailto:hello@nexaarchitecture.com"
+                        class="inline-flex h-14 items-center justify-center gap-3 bg-primary px-6 text-sm font-bold text-primary-foreground transition-transform hover:-translate-y-1">
+                        Book a Strategy Call
+                        <lucide-icon [img]="arrowUpRight" [size]="17" />
+                    </a>
+
+                    <a href="#services"
+                        class="inline-flex h-14 items-center justify-center gap-3 border border-border px-6 text-sm font-bold transition-colors hover:border-primary hover:text-primary">
+                        Explore Services
+                        <lucide-icon [img]="arrowDown" [size]="17" />
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Visual -->
+        <div class="hidden items-center justify-center px-10 py-12 lg:flex" aria-hidden="true">
+            <div
+                class="relative aspect-square w-full max-w-[620px] overflow-hidden border border-border bg-card/40 technical-grid">
+                <!-- Labels -->
+                <div class="absolute left-[8%] top-[8%] text-[9px] font-semibold uppercase text-muted-foreground">
+                    Unstructured input
+                </div>
+
+                <div class="absolute right-[7%] top-[8%] text-[9px] font-semibold uppercase text-primary">
+                    Resolved system
+                </div>
+
+                <!-- Chaos -->
+                <div
+                    class="absolute left-[9%] top-[23%] h-[20%] w-[34%] rotate-[-9deg] border border-border line-drift">
+                </div>
+
+                <div class="absolute left-[16%] top-[31%] h-px w-[34%] rotate-[21deg] bg-muted-foreground"></div>
+
+                <div class="absolute left-[8%] top-[54%] h-[18%] w-[26%] rotate-[7deg] border border-border"></div>
+
+                <div class="absolute left-[27%] top-[18%] size-3 border border-primary"></div>
+
+                <div class="absolute left-[13%] top-[76%] size-2 bg-primary"></div>
+
+                <!-- Transition -->
+                <div class="absolute left-[37%] top-[43%] flex items-center">
+                    <span class="size-2 rounded-full bg-primary"></span>
+                    <span class="h-px w-24 bg-primary"></span>
+                </div>
+
+                <!-- Resolved System -->
+                <div
+                    class="absolute bottom-[14%] right-[10%] top-[20%] w-[42%] border border-primary/70 bg-background/60 p-4 diagram-float">
+                    <div class="grid h-full grid-cols-3 grid-rows-4 gap-2">
+                        @for (item of gridItems; track $index) {
+                        <div [class.bg-primary]="$index === 4 || $index === 7"
+                            [class.border]="$index !== 4 && $index !== 7"
+                            [class.border-border]="$index !== 4 && $index !== 7"
+                            [class.bg-secondary/60]="$index !== 4 && $index !== 7"></div>
+                        }
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
