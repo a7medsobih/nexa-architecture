@@ -1,26 +1,37 @@
 # Nexa Architecture
 
-A modern, responsive landing page for **Nexa Architecture**, a fictional technology and consulting company focused on system architecture, digital transformation, and technical consulting.
+A dark, technical landing page for **Nexa Architecture** — a fictional consulting studio focused on system architecture, digital transformation, and technical strategy.
 
-## Tech Stack
+[Live Demo](https://nexa-architecture.vercel.app/)
 
-* Angular
-* Tailwind CSS
-* Lucide Angular
+![Nexa Architecture preview](./preview.png)
 
 ## Features
 
-* Modern responsive design
-* Mobile-friendly navigation
-* Structured landing page sections
-* CSS-based technical visuals
-* Accessible and semantic markup
-* No backend or external API
+- Single-page layout with sticky navigation
+- Responsive design (mobile menu + desktop nav)
+- Shared section labels and navigation data
+- CSS-only technical diagrams (no images or canvas)
+- Semantic markup and basic accessibility
+- Static site — no backend or API
 
-## Live Demo
 
-[View Live Demo](#)
+## Tech Stack
 
-## Preview
+- [Angular](https://angular.dev/) 21 (standalone components)
+- [Tailwind CSS](https://tailwindcss.com/) 4
+- [Lucide Angular](https://lucide.dev/)
+- TypeScript
 
-![Nexa Architecture Preview](./preview.png)
+## Getting Started
+
+```bash
+npm install
+npm start
+```
+
+Open [http://localhost:4200/](http://localhost:4200/).
+
+```bash
+npm run build
+```
